@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+			a {
+				text-decoration: none !important;
+			}
+	
+			#mainapp{
+				height: 100%;
+				width: 100%;
+			}
+			.pb{
+				width: 48%;
+				float: left;
+				margin:1%;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="mainapp">
+		<div class="pb">
+			
+		
+		固定时间点: 
+		<el-time-select
+  v-model="value1"
+  :picker-options="{
+    start: '08:30',
+    step: '00:15',
+    end: '18:30'
+  }"
+  placeholder="选择时间">
+</el-time-select>
+  </div>
+  	<div class="pb">
+  任意时间点:
+    <el-time-picker
+    v-model="value2"
+    :picker-options="{
+      selectableRange: '18:30:00 - 20:30:00'
+    }"
+    placeholder="任意时间点">
+  </el-time-picker>
+  <el-time-picker
+    arrow-control
+    v-model="value3"
+    :picker-options="{
+      selectableRange: '18:30:00 - 20:30:00'
+    }"
+    placeholder="任意时间点">
+  </el-time-picker>
+    </div>
+  	<div class="pb">
+  固定时间范围:
+<el-time-select
+    placeholder="起始时间"
+    v-model="startTime"
+    :picker-options="{
+      start: '08:30',
+      step: '00:15',
+      end: '18:30'
+    }">
+  </el-time-select>
+  <el-time-select
+    placeholder="结束时间"
+    v-model="endTime"
+    :picker-options="{
+      start: '08:30',
+      step: '00:15',
+      end: '18:30',
+      minTime: startTime
+    }">
+  </el-time-select>
+    </div>
+  	<div class="pb">
+  任意时间范围:
+ <el-time-picker
+    is-range
+    arrow-control
+    v-model="value4"
+    range-separator="至"
+    start-placeholder="开始时间"
+    end-placeholder="结束时间"
+    placeholder="选择时间范围">
+  </el-time-picker>
+    </div>
+  	<div class="pb">
+  选择日:  
+  <el-date-picker
+      v-model="value1"
+      type="date"
+      placeholder="选择日期">
+    </el-date-picker>
+    </div>
+  	<div class="pb">
+选择周:
+   
+   <el-date-picker
+      v-model="value13"
+      type="week"
+      format="yyyy 第 WW 周"
+      placeholder="选择周">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+选择月:
+   
+  <el-date-picker
+      v-model="value14"
+      type="month"
+      placeholder="选择月">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+选择年:
+   
+  <el-date-picker
+      v-model="value15"
+      type="year"
+      placeholder="选择年">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+多个日期:
+   
+     <el-date-picker
+      type="dates"
+      v-model="value114"
+      placeholder="选择一个或多个日期">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+多个日期:
+   
+     <el-date-picker
+      type="dates"
+      v-model="value114"
+      placeholder="选择一个或多个日期">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+日期和时间点:
+ <el-date-picker
+      v-model="value24"
+      type="datetimerange"
+      range-separator="至"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期">
+    </el-date-picker>
+</div>
+  	<div class="pb">
+默认的起始与结束时刻
+   
+     <el-date-picker
+      v-model="value7"
+      type="datetimerange"
+      align="right"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期"
+      :default-time="['12:00:00', '08:00:00']">
+    </el-date-picker>
+</div>
+		</div>
+	</body>
+		<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_date.js"></script>
+
+
+</html>

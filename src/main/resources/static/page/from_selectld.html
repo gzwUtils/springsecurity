@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+			a {
+				text-decoration: none !important;
+			}
+	
+			#mainapp{
+				height: 100%;
+				width: 100%;
+			}
+			.pb{
+				width: 48%;
+				float: left;
+				margin:1%;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="mainapp">
+		<div class="pb">
+			
+		
+		基础选择器: 
+		<el-select clearable v-model="value" placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+    
+  </el-select>
+  </div>
+  	<div class="pb">
+  基础多选:
+    <el-select v-model="value5" multiple placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+    </div>
+  	<div class="pb">
+  自定义模板:
+  <el-select v-model="value6" placeholder="请选择">
+    <el-option
+      v-for="item in cities"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+      <span style="float: left">{{ item.label }}</span>
+      <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
+    </el-option>
+  </el-select>
+    </div>
+  	<div class="pb">
+  分组:
+   <el-select v-model="value7" placeholder="请选择">
+    <el-option-group
+      v-for="group in options3"
+      :key="group.label"
+      :label="group.label">
+      <el-option
+        v-for="item in group.options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-option-group>
+  </el-select>
+    </div>
+  	<div class="pb">
+  可搜索:  
+  <el-select v-model="value8" filterable placeholder="请选择">
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+    </div>
+  	<div class="pb">
+  级联选择器:
+   
+  <el-cascader
+    :options="options"
+    v-model="selectedOptions"
+    @change="handleChange">
+  </el-cascader>
+</div>
+		</div>
+	</body>
+		<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_selectld.js"></script>
+
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- import CSS -->
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			a {
+				text-decoration: none !important;
+			}
+			
+			.el-pagination {
+				padding-left: 20px;
+				margin-top: 15px;
+			}
+			
+			.el-menu,
+			.el-menu--horizontal {
+				border: 0;
+			}
+			
+			#appbtn .tabtitl {
+				line-height: 50px;
+				position: relative;
+				font-size: 18px;
+				font-weight: 500;
+				color: #333333;
+				margin-left: 30px;
+				float: left;
+			}
+			
+			#appbtn button {
+				float: right;
+				margin-top: 5px;
+				margin-right: 10px;
+				margin-left: 0;
+			}
+			
+			#homeifr {
+				height: 100%;
+				width: 100%;
+				border: 0;
+			}
+			
+			#navtab {
+				overflow-y: auto;
+			}
+			
+			#navtab::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 1px rgba(193, 192, 192, 0.3);
+				background-color: rgba(193, 192, 192, 0);
+				border: 1px solid #dbdbdb;
+			}
+			
+			#navtab::-webkit-scrollbar {
+				width: 6px;
+				background-color: #F5F5F5;
+			}
+			
+			#navtab::-webkit-scrollbar-thumb {
+				border-radius: 15px;
+				background-color: #c1c0c0;
+			}
+			
+			.logo {
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body id="bodybox" class="custom-fa4f52">
+		<div id="header">
+			<div class="logo">
+				<img style="margin: 17px;" src="images/nav_logo.png" />
+			</div>
+			<el-button style="margin-top: 20px;margin-right:10px;float: right;" v-on:click="changstyle('headAvue','Avue')">Avue</el-button>
+			<el-button style="margin-top: 20px;margin-right:10px;float: right;" v-on:click="changstyle('headleft','green')">布局二+绿色</el-button>
+
+			<el-button style="margin-top: 20px;margin-right:10px;float: right;" v-on:click="changstyle('color','green')">绿色</el-button>
+			<el-button style="margin-top: 20px;margin-right:10px;float: right;" v-on:click="changstyle('color','blue')">蓝色</el-button>
+			<el-button style="margin-top: 20px;float: right;" v-on:click="changstyle('layout','headleft')">布局二</el-button>
+			<el-button style="margin-top: 20px;margin-right:10px;float: right;" v-on:click="changstyle('layout','headtop')">布局一</el-button>
+
+		</div>
+		<div id="navtab">
+			<div id="topnav">
+				<el-menu class="el-menu-demo" mode="horizontal">
+				<el-submenu :index="index" :id="index" v-for="(menu,index) in treearr">
+						<template slot="title">{{menu.name}}</template>
+						<el-menu-item :index="index+'-'+itemindex" :id="index+'-'+itemindex" v-for="(item,itemindex) in menu.children">{{item.name}}</el-menu-item>
+						
+				</el-submenu>	
+				</el-menu>
+			</div>
+			<div id="leftnav">
+				
+				<el-menu class="el-menu-demo" mode="vertical" >
+						<el-submenu :index="index" :id="index" v-for="(menu,index) in treearr">
+						<template slot="title">{{menu.name}}</template>
+						<el-menu-item :index="index+'-'+itemindex" :id="index+'-'+itemindex" v-for="(item,itemindex) in menu.children">{{item.name}}</el-menu-item>
+						
+						</el-submenu>
+					
+				</el-menu>
+			</div>
+		</div>
+		<div id="app">
+			<iframe id="homeifr" name="homeifr" src="tab_main.html" class="ifrbox">
+			
+			
+		</iframe>
+		</div>
+
+	</body>
+	<!-- import Vue before Element -->
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+
+	<script type="text/javascript" src="js/navtab.js"></script>
+	<script src="js/header.js"></script>
+
+	<script>
+		
+		
+
+		/* 数据网格 $(function() {
+							app.greet();
+						var html = '<tr><th>  </th>';
+						for(i in listname){
+							html+="<th class='serbox'><input class='headinput' type='type' id='"+listname[i].id+"'></th>"
+						}
+						
+						html+='<th> </th></tr>';
+						$("#tablist").find("thead").append(html);
+						
+				 		});
+				 		
+				 $(document).on("click",".headinput",function(){
+								alert("bbbbb");
+						});*/
+	</script>
+
+</html>

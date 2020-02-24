@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+			a {
+				text-decoration: none !important;
+			}
+	
+			#mainapp{
+				height: 100%;
+				width: 100%;
+			}
+			.pb{
+				width: 48%;
+				float: left;
+				margin:1%;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="mainapp">
+		<div class="pb">
+			
+		
+		基础步骤条: 
+		<el-steps :active="active" finish-status="success" align-center>
+   <el-step title="步骤1" description="这是一段很长很长很长的描述性文字"></el-step>
+  <el-step title="步骤2" description="这是一段很长很长很长的描述性文字"></el-step>
+  <el-step title="步骤3" description="这是一段很长很长很长的描述性文字"></el-step>
+  <el-step title="步骤4" description="这是一段很长很长很长的描述性文字"></el-step>
+</el-steps>
+
+<el-button style="margin-top: 12px;" @click="next">下一步</el-button>
+  </div>
+  	<div class="pb">
+  图标步骤条:
+<el-steps :active="1">
+  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
+  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
+  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
+</el-steps>
+    </div>
+  	<div class="pb">
+ 竖式步骤条:
+<div style="height: 300px;">
+  <el-steps direction="vertical" :active="1">
+    <el-step title="步骤 1"></el-step>
+    <el-step title="步骤 2"></el-step>
+    <el-step title="步骤 3" description="这是一段很长很长很长的描述性文字"></el-step>
+  </el-steps>
+</div>
+    </div>
+  	<div class="pb">
+ 简洁风格:
+<el-steps :active="1" simple>
+  <el-step title="步骤 1" icon="el-icon-edit"></el-step>
+  <el-step title="步骤 2" icon="el-icon-upload"></el-step>
+  <el-step title="步骤 3" icon="el-icon-picture"></el-step>
+</el-steps>
+    </div>
+  
+		</div>
+	</body>
+		<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_steps.js"></script>
+
+
+</html>

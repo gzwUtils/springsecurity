@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			body {
+				background-color: #fff;
+			}
+			
+			a {
+				text-decoration: none !important;
+			}
+			
+			#mainapp {
+				height: 100%;
+				width: 100%;
+			}
+			
+			.pb {
+				width: 48%;
+				float: left;
+				margin: 1%;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="mainapp">
+			<div class="pb">
+
+				消息提示:
+		<el-button type="text" @click="open">点击打开 Message Box</el-button>
+			</div>
+			<div class="pb">
+				确认消息:
+ <el-button type="text" @click="open2">点击打开 Message Box</el-button>
+			</div>
+				<div class="pb">
+				提交内容:
+<el-button type="text" @click="open3">点击打开 Message Box</el-button>
+			</div>
+				<div class="pb">
+				使用 HTML 片段:
+<el-button type="text" @click="open4">点击打开 Message Box</el-button>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_messagebox.js"></script>
+
+</html>

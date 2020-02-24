@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "ddxx.db.multiple-source.enabled",
+    "type": "java.lang.String",
+    "description": "是否启用多数据源'"
+  },
+  {
+    "name": "ddxx.security.not-found",
+    "type": "java.lang.String",
+    "description": "未配置权限的路径是否允许访问'"
+  },
+  {
+    "name": "ddxx.security.enabled",
+    "type": "java.lang.String",
+    "description": "是否启用权限配置 默认为：false'"
+  },
+  {
+    "name": "spring.datasource.multiple-source",
+    "type": "java.util.List",
+    "description": "多数据源配置'"
+  },
+  {
+    "name": "ddxx.timer",
+    "type": "java.lang.String",
+    "description": "自定义定时'"
+  },
+  {
+    "name": "ddxx.etl.ktr-location",
+    "type": "java.lang.String",
+    "description": "ktr文件存储路径'"
+  },
+  {
+    "name": "ddxx.etl.kjb-location",
+    "type": "java.lang.String",
+    "description": "kjb文件存储路径'"
+  }
+]}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+			a {
+				text-decoration: none !important;
+			}
+	
+			#mainapp{
+				height: 100%;
+				width: 100%;
+			}
+			.pb{
+				width: 48%;
+				float: left;
+				margin:1%;
+			}
+			 .avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+  }
+  .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+  }
+		</style>
+	</head>
+	<body>
+	<div id="mainapp">
+
+  	<div class="pb">
+默认:
+ <el-slider v-model="value1"></el-slider>
+    </div>
+
+  	<div class="pb">
+自定义初始值:
+   <el-slider v-model="value2"></el-slider>
+  </div>
+   	<div class="pb">
+   		隐藏 Tooltip:
+      <el-slider v-model="value3" :show-tooltip="false"></el-slider>
+   </div>
+   	<div class="pb">
+   		格式化 Tooltip:
+      <el-slider v-model="value4" :format-tooltip="formatTooltip"></el-slider>
+   </div>
+   	<div class="pb">
+   		禁用:
+    <el-slider v-model="value5" disabled></el-slider>
+   </div>
+   	<div class="pb">
+   		不显示间断点:
+        <el-slider
+      v-model="value6"
+      :step="10">
+    </el-slider>
+   </div>
+   	<div class="pb">
+   		显示间断点:
+     <el-slider
+      v-model="value7"
+      :step="10"
+      show-stops>
+    </el-slider>
+   </div>
+   	<div class="pb">
+   		带有输入框:
+      
+    <el-slider
+      v-model="value8"
+      show-input>
+    </el-slider>
+   </div>
+   	<div class="pb">
+   		范围选择:
+      <el-slider
+      v-model="value9"
+      range
+      show-stops
+      :max="10">
+    </el-slider>
+   </div>
+     </div>
+
+		</div>
+	</body>
+		<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_silder.js"></script>
+
+
+</html>

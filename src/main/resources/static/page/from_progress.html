@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			body {
+				background-color: #fff;
+			}
+			
+			a {
+				text-decoration: none !important;
+			}
+			
+			#mainapp {
+				height: 100%;
+				width: 100%;
+			}
+			
+			.pb {
+				width: 48%;
+				float: left;
+				margin: 1%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mainapp">
+			<div class="pb">
+
+				线形进度条 — 百分比外显:
+				<el-progress :percentage="0"></el-progress>
+				<el-progress :percentage="70"></el-progress>
+				<el-progress :percentage="80" color="#8e71c7"></el-progress>
+				<el-progress :percentage="100" status="success"></el-progress>
+				<el-progress :percentage="50" status="exception"></el-progress>
+			</div>
+			<div class="pb">
+
+				线形进度条 — 百分比内显:
+
+				<el-progress :text-inside="true" :stroke-width="18" :percentage="0"></el-progress>
+				<el-progress :text-inside="true" :stroke-width="18" :percentage="70"></el-progress>
+				<el-progress :text-inside="true" :stroke-width="18" :percentage="80" color="rgba(142, 113, 199, 0.7)"></el-progress>
+				<el-progress :text-inside="true" :stroke-width="18" :percentage="100" status="success"></el-progress>
+				<el-progress :text-inside="true" :stroke-width="18" :percentage="50" status="exception"></el-progress>
+			</div>
+			<div class="pb">
+
+				环形进度条:
+
+				<el-progress type="circle" :percentage="0"></el-progress>
+				<el-progress type="circle" :percentage="25"></el-progress>
+				<el-progress type="circle" :percentage="80" color="#8e71c7"></el-progress>
+				<el-progress type="circle" :percentage="100" status="success"></el-progress>
+				<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_progress.js"></script>
+
+</html>

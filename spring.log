@@ -1,0 +1,13 @@
+14:53:55,075 INFO  [com.ddxx.MainApplication] Starting MainApplication on DESKTOP-NFUUS0N with PID 9904 (C:\Users\gzw\git\practice-demo\target\classes started by gzw in C:\Users\gzw\git\practice-demo)
+14:53:55,077 INFO  [com.ddxx.MainApplication] No active profile set, falling back to default profiles: default
+14:53:55,141 INFO  [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5f354bcf: startup date [Mon Sep 17 14:53:55 CST 2018]; root of context hierarchy
+14:53:56,256 INFO  [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:53:56,789 INFO  [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+14:53:57,981 INFO  [org.springframework.web.context.ContextLoader] Root WebApplicationContext: initialization completed in 2844 ms
+14:53:58,102 INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] Servlet dispatcherServlet mapped to [/]
+14:53:58,103 INFO  [org.springframework.boot.web.servlet.ServletRegistrationBean] Servlet statViewServlet mapped to [/druid/*]
+14:53:58,107 INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] Mapping filter: 'characterEncodingFilter' to: [/*]
+14:53:58,107 INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14:53:58,108 INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14:53:58,108 INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] Mapping filter: 'requestContextFilter' to: [/*]
+14:53:58,108 INFO  [org.springframework.boot.web.servlet.FilterRegistrationBean] Mapping filter: 'webStatFilter' to urls: [/*]

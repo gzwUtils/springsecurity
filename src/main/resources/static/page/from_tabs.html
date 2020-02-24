@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+	<style type="text/css">
+		body{
+			background-color: #fff;
+		}
+			a {
+				text-decoration: none !important;
+			}
+	
+			#mainapp{
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="mainapp">
+		<el-tabs type="border-card">
+  <el-tab-pane>
+    <span slot="label"><i class="el-icon-date"></i> 我的行程</span>
+  
+      <el-input placeholder="请输入内容" v-model="input3">
+    <template slot="prepend">Http://</template>
+  </el-input>
+
+
+  </el-tab-pane>
+  <el-tab-pane label="消息中心">
+  
+   <el-input placeholder="请输入内容" v-model="input4">
+    <template slot="append">.com</template>
+  </el-input>
+
+  </el-tab-pane>
+  <el-tab-pane label="角色管理">
+  	
+  <el-input placeholder="请输入内容" v-model="input5" class="input-with-select">
+    <el-select v-model="select" slot="prepend" placeholder="请选择">
+      <el-option label="餐厅名" value="1"></el-option>
+      <el-option label="订单号" value="2"></el-option>
+      <el-option label="用户电话" value="3"></el-option>
+    </el-select>
+    <el-button slot="append" icon="el-icon-search"></el-button>
+  </el-input>
+ 
+  	
+  </el-tab-pane>
+ 
+</el-tabs>
+		</div>
+	</body>
+		<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_tabs.js"></script>
+
+
+</html>

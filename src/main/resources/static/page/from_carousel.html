@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			body {
+				background-color: #fff;
+			}
+			
+			a {
+				text-decoration: none !important;
+			}
+			
+			#mainapp {
+				height: 100%;
+				width: 100%;
+			}
+			
+			.pb {
+				width: 48%;
+				float: left;
+				margin: 1%;
+			}
+			
+			.el-carousel__item h3 {
+				color: #475669;
+				font-size: 14px;
+				opacity: 0.75;
+				line-height: 150px;
+				margin: 0;
+				text-align: center;
+			}
+			
+			.el-carousel__item:nth-child(2n) {
+				background-color: #99a9bf;
+			}
+			
+			.el-carousel__item:nth-child(2n+1) {
+				background-color: #d3dce6;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mainapp">
+			<div class="pb">
+
+				默认 Hover 指示器触发:
+				<el-carousel height="150px">
+					<el-carousel-item v-for="item in 4" :key="item">
+						<h3>{{ item }}</h3>
+					</el-carousel-item>
+				</el-carousel>
+			</div>
+			<div class="pb">
+				Click 指示器触发:
+				<el-carousel trigger="click" height="150px" arrow="always">
+					<el-carousel-item v-for="item in 4" :key="item">
+						<h3>{{ item }}</h3>
+					</el-carousel-item>
+				</el-carousel>
+			</div>
+			<div class="pb">
+				将指示器的显示位置设置在容器外部:
+				<el-carousel indicator-position="outside">
+					<el-carousel-item v-for="item in 4" :key="item">
+						<h3>{{ item }}</h3>
+					</el-carousel-item>
+				</el-carousel>
+			</div>
+			<div class="pb">
+				卡片化:
+				<el-carousel :interval="4000" type="card" height="200px">
+					<el-carousel-item v-for="item in 6" :key="item">
+						<h3>{{ item }}</h3>
+					</el-carousel-item>
+				</el-carousel>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_carousel.js"></script>
+
+</html>

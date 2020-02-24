@@ -1,0 +1,39 @@
+#\u5F00\u53D1\u73AF\u5883
+server:
+  port: 8080
+# Mybatis \u914D\u7F6E mapper\u626B\u63CF\u8DEF\u5F84
+mybatis:
+  mapperLocations: classpath:com/ddxx/*/mapper/*.xml
+  configuration:
+    call-setters-on-nulls: true
+# Mybatis \u914D\u7F6E pagehelper \u5206\u9875\u63D2\u4EF6            
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://192.168.100.224:3306/practice?useUnicode=true&characterEncoding=utf8&useSSL=true
+      driverClassName: com.mysql.jdbc.Driver
+      username: gov
+      # \u5BC6\u7801\u52A0\u5BC6 \u65B9\u5F0F\uFF1Ajava -cp druid-1.1.9.jar com.alibaba.druid.filter.config.ConfigTools you_password
+#      password: OiSFwzWlS8x9VvDqeyEnEXCjknSotHz0LlOpP6PJCKx5mdCrDZLBg0gJ5pv3aBjRIEbRzB/mqO5n76p0YWPivg==
+      password: gov
+      initial-size: 5
+      max-active: 10
+      min-idle: 10
+      max-wait: 10000
+      validationQuery: SELECT 1
+      #\u5F00\u542F\u6570\u636E\u5E93\u5BC6\u7801\u52A0\u5BC6
+#      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKlP5epYyk59ExeftU5Sqz8pjBmHXahPclem07OTDTCZXOap3NtpdgvR6pmvq4LFetsc7qLVaUwrEyIghSX1I6ECAwEAAQ==
+      filter:
+        config:
+          enabled: true
+      aop-patterns: com.ddxx.*.service.*
+ddxx: 
+  db:
+    multipleSource:
+      enabled: false

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ddxx.demo.mapper.AccountInfoMapper">
+<resultMap id="list" type="com.ddxx.demo.domain.AccountInfo">
+<id column="id" property="id"/>
+<result column="name" property="name"/>
+<result column="sex" property="sex"/>
+<result column="display_name" property="display_name"/>
+<result column="school" property="school"/>
+<result column="create_time" property="create_time"/>
+<association property="dictionary" javaType="com.ddxx.demo.domain.Dictionary">
+<result column="value" property="value"/>
+</association>
+</resultMap>
+<select id="getOnePageData" resultMap="list" parameterType="AccountInfo">
+	select A.id,A.name,A.sex,A.display_name,A.school,A.create_time,D.value  from account_info A,dictionary D
+	<where>
+	<if test="A.sex!=null and A.sex!=0">
+	<if test="A,sex==1? '男':'女'"></if>
+	</if>
+	<if test="A.display_name!=null and A.display_name!=0">
+	 and  A.display_name like "%"#{display_name}"%"
+	</if>
+	<if test="A.school!=null and A.school!=0">
+	 and  A.school like "%"#{school}"%"
+	</if>
+	<if test="B.value!=null and B.value!=0">s
+	 and  B.value like "%"#{dictionary.value}"%"
+	</if>
+	and A.position=B.code
+	</where>
+	limit #{PageIndex},#{PageSize}
+</select>
+
+<insert id="insertAccountInfo"  parameterType="AccountInfo">
+insert into account_info values(#{id},#{name},#{password},#{display_name},#{position},#{sex},#{school},#{remark},#{create_time},#{modify_time})
+</insert>
+</mapper>

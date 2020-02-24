@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			body {
+				background-color: #fff;
+			}
+			
+			a {
+				text-decoration: none !important;
+			}
+			
+			#mainapp {
+				height: 100%;
+				width: 100%;
+			}
+			
+			.pb {
+				width: 48%;
+				float: left;
+				margin: 1%;
+			}
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="mainapp">
+			<div class="pb">
+
+				基础用法:
+			<el-button :plain="true" @click="open">打开消息提示</el-button>
+ 		 <el-button :plain="true" @click="openVn">VNode</el-button>
+			</div>
+			<div class="pb">
+				不同状态:
+ <el-button :plain="true" @click="open2">成功</el-button>
+  <el-button :plain="true" @click="open3">警告</el-button>
+  <el-button :plain="true" @click="open">消息</el-button>
+  <el-button :plain="true" @click="open4">错误</el-button>
+			</div>
+				<div class="pb">
+				可关闭:
+ <el-button :plain="true" @click="open5">消息</el-button>
+  <el-button :plain="true" @click="open6">成功</el-button>
+  <el-button :plain="true" @click="open7">警告</el-button>
+  <el-button :plain="true" @click="open8">错误</el-button>
+			</div>
+				<div class="pb">
+				使用 HTML 片段:
+ <el-button :plain="true" @click="openHTML">使用 HTML 片段</el-button>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_message.js"></script>
+
+</html>

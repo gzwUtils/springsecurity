@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index_blue.css" id="stylecolor">
+		<link rel="stylesheet" href="css/headleft.css" id="stylehref">
+		<style type="text/css">
+			body {
+				background-color: #fff;
+			}
+			
+			a {
+				text-decoration: none !important;
+			}
+			
+			#mainapp {
+				height: 100%;
+				width: 100%;
+			}
+			
+			.pb {
+				width: 48%;
+				float: left;
+				margin: 1%;
+			}
+			
+			.text {
+				font-size: 14px;
+			}
+			
+			.item {
+				margin-bottom: 18px;
+			}
+			
+			.clearfix:before,
+			.clearfix:after {
+				display: table;
+				content: "";
+			}
+			
+			.clearfix:after {
+				clear: both
+			}
+			
+			.box-card {
+				width: 480px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mainapp">
+			<div class="pb">
+
+				基础用法:
+				<el-card class="box-card">
+					<div slot="header" class="clearfix">
+						<span>卡片名称</span>
+						<el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+					</div>
+					<div v-for="o in 4" :key="o" class="text item">
+						{{'列表内容 ' + o }}
+					</div>
+				</el-card>
+			</div>
+			<div class="pb">
+
+				卡片阴影:
+
+				<el-row :gutter="12">
+					<el-col :span="8">
+						<el-card shadow="always">
+							总是显示
+						</el-card>
+					</el-col>
+					<el-col :span="8">
+						<el-card shadow="hover">
+							鼠标悬浮时显示
+						</el-card>
+					</el-col>
+					<el-col :span="8">
+						<el-card shadow="never">
+							从不显示
+						</el-card>
+					</el-col>
+				</el-row>
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<!-- import JavaScript -->
+	<script src="js/jquery-1.4.4.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/from_card.js"></script>
+
+</html>
